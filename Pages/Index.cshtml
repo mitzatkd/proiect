@@ -1,0 +1,38 @@
+﻿@page
+@model proiect.Pages.IndexModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/loginstyle.css" />
+    <title>Login</title>
+</head>
+<body>
+
+    @Model.Msg
+
+    <div class="login">
+        <h1>Login</h1>
+        <form method="post" asp-page="Index">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="submit" value="Login">
+                <a class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Register</a>
+                </a>
+        </form>
+    </div>
+</body>
+</html>
